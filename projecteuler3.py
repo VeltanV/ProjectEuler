@@ -1,12 +1,12 @@
 from __future__ import division
-checkNum = 600851475143
+checkNum = 13195
 primeList_num = []
 divList = []
 listLength = 0
 max_prime = 0
 
 
-def isPrime(number):
+def isPrime(number):  #check if number is prime
     divList = []
 
     for x in range(1, number + 1):
@@ -26,11 +26,12 @@ def isPrime(number):
 
         return False
 
-for x in xrange(1,11000):
+for x in xrange(1,checkNum):   #loop for checking if checkNum is divisible by x
 
-    if isPrime(x):
-            primeList_num.append(x)
+    if checkNum % x== 0:       
+        isPrime(x)
+        if isPrime(x)==True:
+            divList.append(x)
+
         
-print len(primeList_num)
-print primeList_num[10001]
-
+print divList
