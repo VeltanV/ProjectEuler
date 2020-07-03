@@ -17,15 +17,8 @@ def isPrime(number):  # check if number is prime
             divList.append(x)
 
             listLength = len(divList)
-
    # print divList
-    if listLength < 3:
-
-        return True
-
-    else:
-
-        return False
+    return listLength < 3
 
 while checkNum != 1:  # loop for checking if checkNum is divisible by x
 
